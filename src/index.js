@@ -9,7 +9,7 @@ function ProgressTimer(props) {
     <div>
       <h2>{msToTime(props.remain)}</h2>
       <div className='main-progress-bar'>
-        <ProgressBar complete={100 - props.remain / props.duration * 100}/>
+        <ProgressBar backgroundColor={props.backgroundColor} complete={100 - props.remain / props.duration * 100}/>
       </div>
     </div>
   );
@@ -73,6 +73,9 @@ class PomodoroTimer extends React.Component {
         remain: !state.isWorking ? this.props.workDuration : this.props.restDuration,
       }));
 
+      var audio = new Audio('notification.mp3');
+      audio.play();
+
       this.toggleStartStop();
     }
   }
@@ -81,8 +84,9 @@ class PomodoroTimer extends React.Component {
     return (
       <div>
         <ProgressTimer remain={this.state.remain}
-          duration={this.state.isWorking ? this.props.workDuration : this.props.restDuration} />
-        <div className='center'>
+          duration={this.state.isWorking ? this.props.workDuration : this.props.restDuration}
+          backgroundColor={this.state.isWorking ? '#F05454' : '#56F056'} />
+        <div className='center inline-block'>
           <button onClick={this.toggleStartStop}>
             {this.state.isTicking ? 'Stop' : 'Start'}
           </button>

@@ -3,6 +3,7 @@ import React from 'react';
 function ProgressBar(props) {
   const fillerStyles = {
     width: `${Math.round(props.complete * 100) / 100}%`,
+    backgroundColor: `${props.backgroundColor}`
   }
   return (
     <div className='progress-bar-container'>

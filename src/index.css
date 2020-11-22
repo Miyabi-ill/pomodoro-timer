@@ -37,6 +37,8 @@ button {
   background-color: #E8E8E8;
   border-color: #222831;
   border-style: solid;
+  border-radius: 50px;
+  margin: 0 30px;
 }
 
 div.root {
@@ -51,7 +53,7 @@ div.root {
 }
 
 .main-progress-bar {
-  margin: 0 50px;
+  margin: 20px 50px;
 }
 
 .progress-bar-container {
@@ -62,7 +64,6 @@ div.root {
 }
 
 .progress-bar-filler {
-  background-color: #F05454;
   border-radius: inherit;
   text-align: right;
   height: 100%;
@@ -72,4 +73,8 @@ div.root {
   background-color: transparent;
   font-weight: bold;
   color: #222831;
+}
+
+.inline-block {
+  display: inline-block;
 }
