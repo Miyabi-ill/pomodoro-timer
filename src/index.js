@@ -115,7 +115,7 @@ function tick() {
   const element = (
     <div>
       <h1>Pomodoro Timer</h1>
-      <PomodoroTimer workDuration={10*1000} restDuration={3*1000} />
+      <PomodoroTimer workDuration={25*60*1000} restDuration={5*60*1000} />
     </div>
   );
   ReactDOM.render(element, document.getElementById('root'));
