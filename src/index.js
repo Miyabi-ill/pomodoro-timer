@@ -14,13 +14,22 @@ class ProgressTimer extends React.Component {
       isTicking: false,
     };
 
-    this.handleClick = this.handleClick.bind(this);
+    this.toggleStartStop = this.toggleStartStop.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
   }
 
-  handleClick() {
+  toggleStartStop() {
     this.setState(state => ({
       isTicking: !state.isTicking,
       endDate: !state.isTicking ? new Date(new Date().getTime() + state.remain) : null,
+    }));
+  }
+
+  resetTimer() {
+    this.setState(state => ({
+      isTicking: false,
+      endDate: null,
+      remain: this.props.duration,
     }));
   }
 
@@ -50,8 +59,11 @@ class ProgressTimer extends React.Component {
         <ProgressBar complete={100 - this.state.remain / this.props.duration * 100}/>
         </div>
         <div className='center'>
-          <button onClick={this.handleClick}>
+          <button onClick={this.toggleStartStop}>
             {this.state.isTicking ? 'Stop' : 'Start'}
+          </button>
+          <button onClick={this.resetTimer}>
+            Reset
           </button>
         </div>
       </div>
