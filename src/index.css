@@ -1,0 +1,75 @@
+* {
+  background-color: #30475E;
+}
+
+h1 {
+  margin: 50px;
+  color: #F05454;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #E8E8E8;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  padding: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: #E8E8E8;
+  border-color: #222831;
+  border-style: solid;
+}
+
+div.root {
+  width: 100%;
+}
+
+.center {
+  margin: 15px auto;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.main-progress-bar {
+  margin: 0 50px;
+}
+
+.progress-bar-container {
+  background-color: #E8E8E8;
+  height: 20px;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.progress-bar-filler {
+  background-color: #F05454;
+  border-radius: inherit;
+  text-align: right;
+  height: 100%;
+}
+
+.progress-bar-label {
+  background-color: transparent;
+  font-weight: bold;
+  color: #222831;
+}
